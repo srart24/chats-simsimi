@@ -1,0 +1,29 @@
+{
+  "name": "chats-simsimi",
+  "version": "0.0.1",
+  "description": "Chats SimSimi adalah modul yang memungkinkan Anda berinteraksi dengan bot SimSimi untuk percakapan yang menyenangkan.",
+  "main": "lib/main.js",
+  "author": "@srart24",
+  "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "simsimi",
+    "srart24"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srart24/chats-simsimi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/srart24/chats-simsimi/issues"
+  },
+  "homepage": "https://github.com/srart24/chats-simsimi#readme",
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
