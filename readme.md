@@ -1,6 +1,10 @@
 # Chats SimSimi
 
 
+![srart24](img/srart24.jpg)
+
+<br><br>
+
 [![Node.js Package](https://github.com/srart24/chats-simsimi/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/srart24/chats-simsimi/actions/workflows/npm-publish.yml)
 [![npm version](https://badge.fury.io/js/chats-simsimi.svg)](https://www.npmjs.com/package/chats-simsimi)
 
