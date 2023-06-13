@@ -5,14 +5,16 @@
 
 <br><br>
 
+---
+
 [![Node.js Package](https://github.com/srart24/chats-simsimi/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/srart24/chats-simsimi/actions/workflows/npm-publish.yml)
 [![npm version](https://badge.fury.io/js/chats-simsimi.svg)](https://www.npmjs.com/package/chats-simsimi)
 
+---
 
+> Chats SimSimi adalah modul yang memungkinkan Anda berinteraksi dengan bot SimSimi untuk percakapan yang menyenangkan.
 
-Chats SimSimi adalah modul yang memungkinkan Anda berinteraksi dengan bot SimSimi untuk percakapan yang menyenangkan.
-
---------
+---
 
 ## Instalasi
 
@@ -30,9 +32,9 @@ const simsimi = require('chats-simsimi')
 
 ```
 
---------
+---
 
-### `simsimi(message, language)`
+#### `simsimi(message, language)`
 
 Fungsi ini mengirim pesan ke SimSimi dan mengembalikan respons.
 
@@ -43,49 +45,51 @@ Fungsi ini mengirim pesan ke SimSimi dan mengembalikan respons.
 
 
 
-Berikut adalah bahasa yang didukung beserta kode bahasanya:
+##### Bahasa yang Di Dukung
 
+---
 
-- `vn`: Bahasa Vietnam
-- `en`: Bahasa Inggris (English)
-- `he`: Bahasa Ibrani (Hebrew)
-- `zh`: Bahasa Tionghoa (Chinese)
-- `ch`: Bahasa Tionghoa (Chinese)
-- `id`: Bahasa Indonesia
-- `ko`: Bahasa Korea
-- `ph`: Bahasa Filipina (Filipino)
-- `ru`: Bahasa Rusia (Russian)
-- `ar`: Bahasa Arab
-- `ms`: Bahasa Melayu (Malay)
-- `es`: Bahasa Spanyol (Spanish)
-- `pt`: Bahasa Portugis (Portuguese)
-- `de`: Bahasa Jerman (German)
-- `th`: Bahasa Thailand (Thai)
-- `ja`: Bahasa Jepang (Japanese)
-- `fr`: Bahasa Prancis (French)
-- `sv`: Bahasa Swedia (Swedish)
-- `tr`: Bahasa Turki (Turkish)
-- `da`: Bahasa Denmark (Danish)
-- `nb`: Bahasa Norwegia Bokmål (Norwegian Bokmål)
-- `it`: Bahasa Italia (Italian)
-- `nl`: Bahasa Belanda (Dutch)
-- `fi`: Bahasa Finlandia (Finnish)
-- `ml`: Bahasa Malayalam
-- `hi`: Bahasa Hindi
-- `kh`: Bahasa Khmer
-- `ca`: Bahasa Katalan (Catalan)
-- `ta`: Bahasa Tamil
-- `rs`: Bahasa Serbia
-- `mn`: Bahasa Mongolia
-- `fa`: Bahasa Persia (Persian)
-- `pa`: Bahasa Punjabi
-- `cy`: Bahasa Wales (Welsh)
-- `hr`: Bahasa Kroasia (Croatian)
-- `el`: Bahasa Yunani (Greek)
-- `az`: Bahasa Azerbaijan
-- `sw`: Bahasa Swahili
+| Language                   | Code  |
+|-------------------------|-------|
+| Vietnam           | vn    |
+| Inggris (English) | en    |
+| Ibrani (Hebrew)   | he    |
+| Tionghoa (Chinese)| zh    |
+| Indonesia         | id    |
+| Korea             | ko    |
+| Filipina (Filipino)| ph   |
+| Rusia (Russian)   | ru    |
+| Arab              | ar    |
+| Melayu (Malay)    | ms    |
+| Spanyol (Spanish) | es    |
+| Portugis (Portuguese) | pt |
+| Jerman (German)   | de    |
+| Thailand (Thai)   | th    |
+| Jepang (Japanese) | ja    |
+| Prancis (French)  | fr    |
+| Swedia (Swedish)  | sv    |
+| Turki (Turkish)   | tr    |
+| Denmark (Danish)  | da    |
+| Norwegia Bokmål (Norwegian Bokmål) | nb |
+| Italia (Italian)  | it    |
+| Belanda (Dutch)   | nl    |
+| Finlandia (Finnish) | fi   |
+| Malayalam         | ml    |
+| Hindi             | hi    |
+| Khmer             | kh    |
+| Katalan (Catalan) | ca    |
+| Tamil             | ta    |
+| Serbia            | rs    |
+| Mongolia          | mn    |
+| Persia (Persian)  | fa    |
+| Punjabi           | pa    |
+| Wales (Welsh)     | cy    |
+| Kroasia (Croatian)| hr    |
+| Yunani (Greek)    | el    |
+| Azerbaijan        | az    |
+| Swahili           | sw    |
 
---------
+---
 
 ## Penggunaan
 
@@ -115,7 +119,7 @@ Response: {
 }
 ```
 
---------
+---
 
 
 ## Lisensi
@@ -123,7 +127,7 @@ Response: {
  [MIT LISENSI](LICENSE)
 
 
---------
+---
 
 
 ## Kontak
@@ -133,7 +137,7 @@ Jika Anda memiliki pertanyaan, silakan hubungi Saya melalui:
 -  Email:[srrart.024@gmail.com](mailto:rart.024@gmail.com)
 - GitHub: [@srart24](https://github.com/srart24)
 
---------
+---
 
 ## Donasi
 
