@@ -1,4 +1,4 @@
-# Chats SimSimi
+# Chats-simSimi
 
 
 ![srart24](img/srart24.jpg)
