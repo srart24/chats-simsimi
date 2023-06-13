@@ -145,3 +145,12 @@ Terima kasih atas dukungan Anda!
 
 
 
+## Author
+
+---
+
+| <img src="https://github.com/srart24.png" width="70" height="70"> |
+| :---: |
+| [srart24](https://github.com/srart24) |
+
+---
