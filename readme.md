@@ -112,10 +112,10 @@ simsimi('Halo, apa kabar?', 'id')
 
 ### Response
 ``` js
-Response: {
-  "status": true,
-  "creator": "@srart24",
-  "result": "Baik, kalau kamu?"
+SimSimi: {
+  status: true,
+  creator: '@srart24',
+  result: 'Baik kak. Kakak bagaimana?'
 }
 ```
 
@@ -128,24 +128,6 @@ Response: {
 
 
 ---
-
-
-## Kontak
-
-Jika Anda memiliki pertanyaan, silakan hubungi Saya melalui:
-
--  Email:[srrart.024@gmail.com](mailto:rart.024@gmail.com)
-- GitHub: [@srart24](https://github.com/srart24)
-
----
-
-## Donasi
-
-Jika Anda ingin donasi di [Klik Di Sini](https://saweria.co/srart24)
-
-
-Terima kasih atas dukungan Anda!
-
 
 
 
