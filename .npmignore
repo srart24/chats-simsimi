@@ -1,6 +1,7 @@
 src/
 *.ts
-
+tsconfig.json
+tsconfig.cjs.json
 node_modules/
 *.log
 .git/
