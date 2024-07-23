@@ -22,6 +22,10 @@ Anda dapat menginstal modul ini melalui npm. Pastikan Anda memiliki Node.js terp
 
 ```bash
 npm install chats-simsimi
+```
+
+``` bash
+yarn add chats-simsimi
 
 ```
 
