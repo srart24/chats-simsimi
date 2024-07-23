@@ -1,15 +1,21 @@
 {
   "name": "chats-simsimi",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Chats SimSimi adalah modul yang memungkinkan Anda berinteraksi dengan bot SimSimi untuk percakapan yang menyenangkan.",
-  "main": "lib/main.js",
   "author": "@srart24",
   "license": "MIT",
-  "directories": {
-    "lib": "lib"
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js"
+    }
   },
   "scripts": {
-    "test": "node test.js"
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "simsimi",
@@ -22,8 +28,12 @@
   "bugs": {
     "url": "https://github.com/srart24/chats-simsimi/issues"
   },
-  "homepage": "https://github.com/srart24/chats-simsimi#readme",
+  "homepage": "https://github.com/srart24/chats-simsimi/tree/srart24",
   "dependencies": {
-    "axios": "^1.4.0"
+    "axios": "^1.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "typescript": "^5.5.4"
   }
 }
