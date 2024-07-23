@@ -1,0 +1,7 @@
+src/
+*.ts
+
+node_modules/
+*.log
+.git/
+.github/
