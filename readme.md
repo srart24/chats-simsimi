@@ -31,8 +31,14 @@ yarn add chats-simsimi
 
 ## import module
 ``` js
+// CJS
+const { chatsimsimi } = require('chats-simsimi');
 
-const simsimi = require('chats-simsimi')
+```
+
+``` js
+// ESM
+import { chatsimsimi } from 'chats-simsimi';
 
 ```
 
@@ -97,30 +103,46 @@ Fungsi ini mengirim pesan ke SimSimi dan mengembalikan respons.
 
 ## Penggunaan
 
-Berikut adalah contoh penggunaan dasar modul ini:
+### Berikut adalah contoh penggunaan dasar modul ini:
 
+
+#### CJS
 ``` js
 
-const simsimi = require('chats-simsimi');
+// Mengimpor fungsi dari modul menggunakan CommonJS
+const { chatsimsimi } = require('chats-simsimi');
 
-// Mengirim pesan ke SimSimi
-simsimi('Halo, apa kabar?', 'id')
-  .then(response => {
-    console.log('SimSimi:', response);
-  })
-  .catch(error => {
-    console.error('Terjadi kesalahan:', error);
-  });
+// Menggunakan fungsi
+async function run() {
+    try {
+        const response = await chatsimsimi("Hallo apa kabar", "id");
+        console.log(response);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+run();
 
 ```
 
-### Response
+#### ESM
 ``` js
-SimSimi: {
-  status: true,
-  creator: '@srart24',
-  result: 'Baik kak. Kakak bagaimana?'
+// Mengimpor fungsi dari modul menggunakan ES Modules
+import { chatsimsimi } from 'chats-simsimi';
+
+// Menggunakan fungsi
+async function run() {
+    try {
+        const response = await chatsimsimi("Hello", "en");
+        console.log(response);
+    } catch (error) {
+        console.error(error);
+    }
 }
+
+run();
+
 ```
 
 ---
