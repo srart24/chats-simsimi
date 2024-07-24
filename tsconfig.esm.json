@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES6",
+    "outDir": "./dist/esm",
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "declarationMap": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

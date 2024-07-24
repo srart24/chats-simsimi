@@ -2,6 +2,7 @@ node_modules/
 *.log
 .git/
 .github/
+scripts/
 src/
-tsconfig.json
+tsconfig.esm.json
 tsconfig.cjs.json

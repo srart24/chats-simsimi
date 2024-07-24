@@ -1,10 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES6",
     "module": "CommonJS",
     "outDir": "./dist/cjs",
-    "declaration": true,
-    "declarationMap": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
