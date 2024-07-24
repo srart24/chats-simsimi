@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "ESNext",
-    "target": "ES6",
+    "target": "ES2016",
     "outDir": "./dist/esm",
     "declaration": true,
     "declarationDir": "./dist/types",
