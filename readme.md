@@ -1,14 +1,30 @@
 # Chats-simSimi
 
-
+<div align="center">
+    
 ![srart24](img/srart24.jpg)
+
+</div>
 
 <br><br>
 
 ---
 
+<div align="center">
+  <a href="mailto:mysrart24@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/-Gmail-c14438?style=for-the-badge&logo=Gmail&logoColor=white" alt="Email" />
+  </a>
+  <a href="https://www.instagram.com/srart24" target="_blank">
+    <img src="https://img.shields.io/badge/-Instagram-e4405f?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
+  </a>
+</div>
+
+<div align="center">
+    
 [![Node.js Package](https://github.com/srart24/chats-simsimi/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/srart24/chats-simsimi/actions/workflows/npm-publish.yml)
 [![npm version](https://badge.fury.io/js/chats-simsimi.svg)](https://www.npmjs.com/package/chats-simsimi)
+
+</div>
 
 ---
 
@@ -32,116 +48,105 @@ yarn add chats-simsimi
 ## import module
 ``` js
 // CJS
-const { chatsimsimi } = require('chats-simsimi');
+const chatsimsimi = require('chats-simsimi').default;
 
 ```
 
 ``` js
 // ESM
-import { chatsimsimi } from 'chats-simsimi';
+import chatsimsimi from 'chats-simsimi';
 
 ```
 
 ---
 
-#### `simsimi(message, language)`
+## **Parameter:**
 
-Fungsi ini mengirim pesan ke SimSimi dan mengembalikan respons.
-
-**Parameter:**
+chatsimsimi(message, language)
 
 - `message` (string): Pesan yang akan dikirim ke SimSimi.
 - `language` (string): Bahasa percakapan dengan SimSimi. 
 
-
-
-##### Bahasa yang Di Dukung
-
 ---
+
+## Bahasa yang Di Dukung
+
+<details>
+<summary>Code Language</summary>
 
 | Language                   | Code  |
-|-------------------------|-------|
-| Vietnam           | vn    |
-| Inggris (English) | en    |
-| Ibrani (Hebrew)   | he    |
-| Tionghoa (Chinese)| zh    |
-| Indonesia         | id    |
-| Korea             | ko    |
-| Filipina (Filipino)| ph   |
-| Rusia (Russian)   | ru    |
-| Arab              | ar    |
-| Melayu (Malay)    | ms    |
-| Spanyol (Spanish) | es    |
-| Portugis (Portuguese) | pt |
-| Jerman (German)   | de    |
-| Thailand (Thai)   | th    |
-| Jepang (Japanese) | ja    |
-| Prancis (French)  | fr    |
-| Swedia (Swedish)  | sv    |
-| Turki (Turkish)   | tr    |
-| Denmark (Danish)  | da    |
+|----------------------------|-------|
+| Vietnam                    | vn    |
+| Inggris (English)          | en    |
+| Ibrani (Hebrew)            | he    |
+| Tionghoa (Chinese)         | zh    |
+| Indonesia                  | id    |
+| Korea                      | ko    |
+| Filipina (Filipino)        | ph    |
+| Rusia (Russian)            | ru    |
+| Arab                       | ar    |
+| Melayu (Malay)             | ms    |
+| Spanyol (Spanish)          | es    |
+| Portugis (Portuguese)      | pt    |
+| Jerman (German)            | de    |
+| Thailand (Thai)            | th    |
+| Jepang (Japanese)          | ja    |
+| Prancis (French)           | fr    |
+| Swedia (Swedish)           | sv    |
+| Turki (Turkish)            | tr    |
+| Denmark (Danish)           | da    |
 | Norwegia Bokmål (Norwegian Bokmål) | nb |
-| Italia (Italian)  | it    |
-| Belanda (Dutch)   | nl    |
-| Finlandia (Finnish) | fi   |
-| Malayalam         | ml    |
-| Hindi             | hi    |
-| Khmer             | kh    |
-| Katalan (Catalan) | ca    |
-| Tamil             | ta    |
-| Serbia            | rs    |
-| Mongolia          | mn    |
-| Persia (Persian)  | fa    |
-| Punjabi           | pa    |
-| Wales (Welsh)     | cy    |
-| Kroasia (Croatian)| hr    |
-| Yunani (Greek)    | el    |
-| Azerbaijan        | az    |
-| Swahili           | sw    |
+| Italia (Italian)           | it    |
+| Belanda (Dutch)            | nl    |
+| Finlandia (Finnish)        | fi    |
+| Malayalam                  | ml    |
+| Hindi                      | hi    |
+| Khmer                      | kh    |
+| Katalan (Catalan)          | ca    |
+| Tamil                      | ta    |
+| Serbia                     | rs    |
+| Mongolia                   | mn    |
+| Persia (Persian)           | fa    |
+| Punjabi                    | pa    |
+| Wales (Welsh)              | cy    |
+| Kroasia (Croatian)         | hr    |
+| Yunani (Greek)             | el    |
+| Azerbaijan                 | az    |
+| Swahili                    | sw    |
+
+</details>
 
 ---
+
 
 ## Penggunaan
 
-### Berikut adalah contoh penggunaan dasar modul ini:
-
-
 #### CJS
 ``` js
+// Esm import chatsimsimi from 'chats-simsimi';
+const chatsimsimi = require('chats-simsimi').default;
 
-// Mengimpor fungsi dari modul menggunakan CommonJS
-const { chatsimsimi } = require('chats-simsimi');
-
-// Menggunakan fungsi
-async function run() {
-    try {
-        const response = await chatsimsimi("Hallo apa kabar", "id");
-        console.log(response);
-    } catch (error) {
-        console.error(error);
-    }
-}
-
-run();
+chatsimsimi('Hello', 'id')
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.error(error);
+  });
 
 ```
 
 #### ESM
 ``` js
-// Mengimpor fungsi dari modul menggunakan ES Modules
-import { chatsimsimi } from 'chats-simsimi';
+import chatsimsimi from 'chats-simsimi';
 
-// Menggunakan fungsi
-async function run() {
-    try {
-        const response = await chatsimsimi("Hello", "en");
-        console.log(response);
-    } catch (error) {
-        console.error(error);
-    }
-}
-
-run();
+chatsimsimi('Hello', 'id')
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.error(error);
+  });
 
 ```
 
