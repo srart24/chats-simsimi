@@ -123,7 +123,6 @@ chatsimsimi(message, language)
 
 #### CJS
 ``` js
-// Esm import chatsimsimi from 'chats-simsimi';
 const chatsimsimi = require('chats-simsimi').default;
 
 chatsimsimi('Hello', 'id')
