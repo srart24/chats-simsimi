@@ -1,6 +1,7 @@
 import axios from "axios";
+import ZBadWord from "ZBadWord";
 
-export default async function chatsimsimi(message: string, languageCode: string): Promise<any> {
+export default async function chatsimsimi(message: string, languageCode: string, sensor: boolean): Promise<any> {
 	const supportedLanguages: string[] = ["vn", "en", "he", "zh", "ch", "id", "ko", "ph", "ru", "ar", "ms", "es", "pt", "de", "th", "ja", "fr", "sv", "tr", "da", "nb", "it", "nl", "fi", "ml", "hi", "kh", "ca", "ta", "rs", "mn", "fa", "pa", "cy", "hr", "el", "az", "sw", "te", "pl", "ro", "si", "fy", "kk", "cs", "hu", "lt", "be", "br", "af", "bg", "is", "uk", "jv", "eu", "rw", "or", "al", "bn", "gn", "kn", "my", "sk", "gl", "gu", "ps", "ka", "et", "tg", "as", "mr", "ne", "ur", "uz", "cx", "hy", "lv", "sl", "ku", "mk", "bs", "ig", "lb", "mg", "ny", "sn", "tt", "yo", "co", "eo", "ga", "hm", "hw", "lo", "mi", "so", "ug", "am", "gd"];
 
 	const errorMessageReserr = {
@@ -107,10 +108,10 @@ export default async function chatsimsimi(message: string, languageCode: string)
 
 	if (typeof message !== "string") {
 		const errorResponse = {status: false, creator: "@srart24", result: "Please send a message"};
-		throw JSON.stringify(errorResponse, null, 2);
+		throw errorResponse;
 	} else if (!supportedLanguages.includes(languageCode)) {
 		const errorResponse = {status: false, creator: "@srart24", result: "Unsupported language code"};
-		throw JSON.stringify(errorResponse, null, 2);
+		throw errorResponse;
 	}
 
 	const options = new URLSearchParams();
@@ -124,10 +125,16 @@ export default async function chatsimsimi(message: string, languageCode: string)
 			},
 		});
 		const res = response.data;
-		const successResponse = {status: true, creator: "@srart24", result: res.message};
-		return JSON.stringify(successResponse, null, 2);
+		if (sensor) {
+			const censoredText = ZBadWord.sensor(res.message);
+			const successResponse = {status: true, creator: "@srart24", result: censoredText};
+			return successResponse;
+		} else if(!sensor) {
+			const successResponse = {status: true, creator: "@srart24", result: res.message};
+			return successResponse;
+		}
 	} catch (error) {
 		const errorResponse = {status: false, creator: "@srart24", result: errorMessageReserr[languageCode] || errorMessageReserr["en"]};
-		throw JSON.stringify(errorResponse, null, 2);
+		throw errorResponse;
 	}
 }
