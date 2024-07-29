@@ -1,5 +1,5 @@
 import axios from "axios";
-import ZBadWord from "ZBadWord";
+import ZBadWord from "zbadword";
 
 export default async function chatsimsimi(message: string, languageCode: string, sensor: boolean): Promise<any> {
 	const supportedLanguages: string[] = ["vn", "en", "he", "zh", "ch", "id", "ko", "ph", "ru", "ar", "ms", "es", "pt", "de", "th", "ja", "fr", "sv", "tr", "da", "nb", "it", "nl", "fi", "ml", "hi", "kh", "ca", "ta", "rs", "mn", "fa", "pa", "cy", "hr", "el", "az", "sw", "te", "pl", "ro", "si", "fy", "kk", "cs", "hu", "lt", "be", "br", "af", "bg", "is", "uk", "jv", "eu", "rw", "or", "al", "bn", "gn", "kn", "my", "sk", "gl", "gu", "ps", "ka", "et", "tg", "as", "mr", "ne", "ur", "uz", "cx", "hy", "lv", "sl", "ku", "mk", "bs", "ig", "lb", "mg", "ny", "sn", "tt", "yo", "co", "eo", "ga", "hm", "hw", "lo", "mi", "so", "ug", "am", "gd"];
