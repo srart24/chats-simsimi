@@ -1,30 +1,14 @@
 # Chats-simSimi
 
-<div align="center">
-    
-![srart24](img/srart24.jpg)
 
-</div>
+![srart24](img/srart24.jpg)
 
 <br><br>
 
 ---
 
-<div align="center">
-  <a href="mailto:mysrart24@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/-Gmail-c14438?style=for-the-badge&logo=Gmail&logoColor=white" alt="Email" />
-  </a>
-  <a href="https://www.instagram.com/srart24" target="_blank">
-    <img src="https://img.shields.io/badge/-Instagram-e4405f?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
-  </a>
-</div>
-
-<div align="center">
-    
 [![Node.js Package](https://github.com/srart24/chats-simsimi/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/srart24/chats-simsimi/actions/workflows/npm-publish.yml)
 [![npm version](https://badge.fury.io/js/chats-simsimi.svg)](https://www.npmjs.com/package/chats-simsimi)
-
-</div>
 
 ---
 
@@ -33,8 +17,6 @@
 ---
 
 ## Instalasi
-
-Anda dapat menginstal modul ini melalui npm. Pastikan Anda memiliki Node.js terpasang di sistem Anda sebelum melanjutkan.
 
 ```bash
 npm install chats-simsimi
@@ -60,16 +42,19 @@ import chatsimsimi from 'chats-simsimi';
 
 ---
 
-## **Parameter:**
+#### `simsimi(message, language, sensor)`
 
-chatsimsimi(message, language)
+Fungsi ini mengirim pesan ke SimSimi dan mengembalikan respons.
+
+**Parameter:**
 
 - `message` (string): Pesan yang akan dikirim ke SimSimi.
-- `language` (string): Bahasa percakapan dengan SimSimi. 
+- `language` (string): Bahasa percakapan dengan SimSimi.
+- `sensor` (boolean): true / false
 
----
 
-## Bahasa yang Di Dukung
+
+##### Bahasa yang Di Dukung
 
 <details>
 <summary>Code Language</summary>
@@ -118,14 +103,16 @@ chatsimsimi(message, language)
 
 ---
 
-
 ## Penggunaan
+
+### Berikut adalah contoh penggunaan dasar modul ini:
+
 
 #### CJS
 ``` js
 const chatsimsimi = require('chats-simsimi').default;
 
-chatsimsimi('Hello', 'id')
+chatsimsimi('Hello', 'id', true)
   .then(response => {
     console.log(response);
   })
@@ -139,13 +126,16 @@ chatsimsimi('Hello', 'id')
 ``` js
 import chatsimsimi from 'chats-simsimi';
 
-chatsimsimi('Hello', 'id')
+chatsimsimi('Hello', 'id', false)
   .then(response => {
     console.log(response);
+    return response;
   })
   .catch(error => {
     console.error(error);
+    throw error;
   });
+
 
 ```
 
