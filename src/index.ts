@@ -119,25 +119,32 @@ export default async function chatsimsimi(message: string, languageCode: string,
 	options.append("lc", languageCode);
 
 	try {
-		const response = await axios.post("https://api.simsimi.vn/v2/simtalk", options, {
-			headers: {
-				"Content-Type": "application/x-www-form-urlencoded",
-			},
-			timeout: 6000,
-		});
-		const res = response.data;
-		if (sensor) {
-			const censoredText = ZBadWord.sensor(res.message);
-			const successResponse = {status: true, creator: "@srart24", result: censoredText};
-			return successResponse;
-		} else if(!sensor) {
-			const successResponse = {status: true, creator: "@srart24", result: res.message};
-			return successResponse;
-		}
-	} catch (error) {
-			const message = error.response?.data?.message;
-			const fallbackMessage = errorMessageReserr[languageCode] || errorMessageReserr["en"];
-            const errorResponse = { status: true, creator: "@srart24", result: message || fallbackMessage };
-            return errorResponse;
+	const response = await axios.post("https://api.simsimi.vn/v2/simtalk", options, {
+		headers: {
+			"Content-Type": "application/x-www-form-urlencoded",
+		},
+		timeout: 6000,
+	});
+	const res = response.data;
+	if (sensor) {
+		const censoredText = ZBadWord.sensor(res.message);
+		const successResponse = { status: true, creator: "@srart24", result: censoredText };
+		return successResponse;
+	} else if (!sensor) {
+		const successResponse = { status: true, creator: "@srart24", result: res.message };
+		return successResponse;
 	}
+} catch (error) {
+	const message = error.response?.data?.message;
+
+	if (sensor && message) {
+		const censoredText = ZBadWord.sensor(message);
+		const errorResponse = { status: false, creator: "@srart24", result: censoredText };
+		return errorResponse;
+	} else {
+		const fallbackMessage = errorMessageReserr[languageCode] || errorMessageReserr["en"];
+		const errorResponse = { status: false, creator: "@srart24", result: message || fallbackMessage };
+		return errorResponse;
+	}
+}
 }
