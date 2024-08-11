@@ -123,6 +123,7 @@ export default async function chatsimsimi(message: string, languageCode: string,
 			headers: {
 				"Content-Type": "application/x-www-form-urlencoded",
 			},
+			timeout: 6000,
 		});
 		const res = response.data;
 		if (sensor) {
@@ -134,7 +135,9 @@ export default async function chatsimsimi(message: string, languageCode: string,
 			return successResponse;
 		}
 	} catch (error) {
-		const errorResponse = {status: false, creator: "@srart24", result: errorMessageReserr[languageCode] || errorMessageReserr["en"]};
-		throw errorResponse;
+			const message = error.response?.data?.message;
+			const fallbackMessage = errorMessageReserr[languageCode] || errorMessageReserr["en"];
+            const errorResponse = { status: true, creator: "@srart24", result: message || fallbackMessage };
+            return errorResponse;
 	}
 }
