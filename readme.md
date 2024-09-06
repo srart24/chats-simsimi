@@ -1,4 +1,4 @@
-# Chats-simSimi
+# @srart24/chats-simsimi
 
 
 ![srart24](img/srart24.jpg)
@@ -7,8 +7,8 @@
 
 ---
 
-[![Node.js Package](https://github.com/srart24/chats-simsimi/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/srart24/chats-simsimi/actions/workflows/npm-publish.yml)
-[![npm version](https://badge.fury.io/js/chats-simsimi.svg)](https://www.npmjs.com/package/chats-simsimi)
+[![Node.js Package](https://github.com/srart24/@srart24/chats-simsimi/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/srart24/@srart24/chats-simsimi/actions/workflows/npm-publish.yml)
+[![npm version](https://badge.fury.io/js/@srart24/chats-simsimi.svg)](https://www.npmjs.com/package/@srart24/chats-simsimi)
 
 ---
 
@@ -19,24 +19,24 @@
 ## Instalasi
 
 ```bash
-npm install chats-simsimi
+npm install @srart24/chats-simsimi
 ```
 
 ``` bash
-yarn add chats-simsimi
+yarn add @srart24/chats-simsimi
 
 ```
 
 ## import module
 ``` js
 // CJS
-const chatsimsimi = require('chats-simsimi').default;
+const chatsimsimi = require('@srart24/chats-simsimi').default;
 
 ```
 
 ``` js
 // ESM
-import chatsimsimi from 'chats-simsimi';
+import chatsimsimi from '@srart24/chats-simsimi';
 
 ```
 
@@ -110,7 +110,7 @@ Fungsi ini mengirim pesan ke SimSimi dan mengembalikan respons.
 
 #### CJS
 ``` js
-const chatsimsimi = require('chats-simsimi').default;
+const chatsimsimi = require('@srart24/chats-simsimi').default;
 
 chatsimsimi('Hello', 'id', true)
   .then(response => {
@@ -124,7 +124,7 @@ chatsimsimi('Hello', 'id', true)
 
 #### ESM
 ``` js
-import chatsimsimi from 'chats-simsimi';
+import chatsimsimi from '@srart24/chats-simsimi';
 
 chatsimsimi('Hello', 'id', false)
   .then(response => {
